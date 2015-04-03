@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UltiBook</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="home_newplay">New Play</string>
+    <string name="home_loadplay">Load Play</string>
+    <string name="home_playbooks">Playbooks</string>
+    <string name="home_recentplay">Recent Play</string>
+    <string name="home_recentplaybook">Recent Playbook</string>
+
+    <string name="newplay_dialog_title">New Play</string>
+    <string name="newplay_name_of_play">Name:</string>
+    <string name="newplay_type_of_play">Type:</string>
+    <string name="newplay_offense_players_label">Offensive Players:</string>
+    <string name="newplay_defensive_players_label">Defensive Players:</string>
+    <string name="newplay_cones_label">Cones:</string>
+    <string name="newplay_done">Done</string>
+
+    <string-array name="newplay_number_options">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="newplay_cones_options">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>8</item>
+        <item>12</item>
+        <item>16</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="newplay_play_types">
+        <item>Offensive</item>
+        <item>Defensive</item>
+        <item>Drill</item>
+        <item>Generic</item>
+    </string-array>
+
+    <string name="playbooklist_title">PLAYBOOKS</string>
+
+
+    <string name="update_version">0.0.1</string>
+    <string name="update_information">This is the first version</string>
+
+</resources>

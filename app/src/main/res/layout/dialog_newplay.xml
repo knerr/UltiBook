@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <TableRow
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/newplay_dialog_title"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/newplay_name_of_play"
+            />
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:id="@+id/newplay_play_name"/>
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/newplay_type_of_play"
+            />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newplay_play_type_spinner"></Spinner>
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/newplay_offense_players_label"
+            />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newplay_offensive_numbers_spinner"></Spinner>
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/newplay_defensive_players_label"
+            />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newplay_defensive_numbers_spinner"></Spinner>
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/newplay_cones_label"
+            />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newplay_cones_number_spinner"></Spinner>
+
+    </TableRow>
+
+</TableLayout>
