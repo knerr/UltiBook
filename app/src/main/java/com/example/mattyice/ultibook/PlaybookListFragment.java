@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -21,7 +22,14 @@ public class PlaybookListFragment extends ListFragment {
         getActivity().setTitle(R.string.playbooklist_title);
         mPlaybookArrayList = PlaybookLab.get(getActivity()).getPlaybooks();
 
+        PlaybookAdapter adapter = new PlaybookAdapter(mPlaybookArrayList);
+        setListAdapter(adapter);
+    }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        ((PlaybookAdapter)getListAdapter()).notifyDataSetChanged();
     }
 
     public class PlaybookAdapter extends ArrayAdapter<Playbook> {
@@ -38,6 +46,12 @@ public class PlaybookListFragment extends ListFragment {
             Playbook p = getItem(position);
 
             //Put the contents of the playbook into the view!
+            TextView playbookName = (TextView)convertView.findViewById(R.id.playbooklist_title);
+            playbookName.setText(p.getName());
+            TextView numOfPlays = (TextView)convertView.findViewById(R.id.playbooklist_numberofplays);
+                numOfPlays.setText("Number Of Plays: " + Integer.toString(p.getPlays().size()));
+
+            return convertView;
         }
     }
 }

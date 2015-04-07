@@ -10,8 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import java.util.Date;
-
 /**
  * Created by Matty Ice on 3/23/2015.
  */
@@ -47,7 +45,6 @@ public class HomepageFragment extends Fragment {
         mLoadPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
             }
         });
 
@@ -55,7 +52,9 @@ public class HomepageFragment extends Fragment {
         mPlaybooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(getActivity(), PlaybookListActivity.class);
 
+                startActivity(i);
             }
         });
 

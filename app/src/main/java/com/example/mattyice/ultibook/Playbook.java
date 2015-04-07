@@ -11,11 +11,13 @@ public class Playbook {
     private ArrayList<Play> mPlays;
     private UUID mUUID;
 
-    public Playbook () {}
+    public Playbook () {
+    }
 
     public Playbook(String name){
         mName = name;
         mUUID = UUID.randomUUID();
+        mPlays = new ArrayList<Play>();
     }
 
     public String getName() {
