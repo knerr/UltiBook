@@ -45,6 +45,9 @@ public class HomepageFragment extends Fragment {
         mLoadPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(getActivity(), PlayListActivity.class);
+
+                startActivity(i);
             }
         });
 

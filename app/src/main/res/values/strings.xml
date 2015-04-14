@@ -17,8 +17,10 @@
     <string name="newplay_defensive_players_label">Defensive Players:</string>
     <string name="newplay_cones_label">Cones:</string>
     <string name="newplay_done">Done</string>
+    <string name="newplay_playbook_label">Playbook: </string>
 
     <string-array name="newplay_number_options">
+        <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -29,6 +31,7 @@
     </string-array>
 
     <string-array name="newplay_cones_options">
+        <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -47,6 +50,8 @@
     </string-array>
 
     <string name="playbooklist_title">PLAYBOOKS</string>
+
+    <string name="playlist_title">PLAYS</string>
 
 
     <string name="update_version">0.0.1</string>

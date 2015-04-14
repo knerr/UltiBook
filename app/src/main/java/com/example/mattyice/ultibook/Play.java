@@ -15,6 +15,7 @@ public class Play implements Serializable {
     private int mDefensivePlayers;
     private int mCones;
     private ArrayList<Stage> mStages;
+    private String mPlaybook;
 
     public Play () {
         mID = UUID.randomUUID();
@@ -24,13 +25,15 @@ public class Play implements Serializable {
         mName = name;
         mType = type;
     }
-    public Play (String name, PlayTypes type, int OffensivePlayers, int DefensivePlayers, int Cones) {
+    public Play (String name, PlayTypes type, int OffensivePlayers, int DefensivePlayers, int Cones,
+                 String playbook) {
         mID = UUID.randomUUID();
         this.mName = name;
         mType = type;
         mOffensivePlayers = OffensivePlayers;
         mDefensivePlayers = DefensivePlayers;
         mCones = Cones;
+        mPlaybook = playbook;
     }
 
     public UUID getID() {
@@ -80,5 +83,9 @@ public class Play implements Serializable {
     public ArrayList<Stage> getStages() {
         return mStages;
     }
+
+    public void setPlaybook(String Playbook) { mPlaybook = Playbook;}
+
+    public String getPlaybook() {return mPlaybook;}
 
 }

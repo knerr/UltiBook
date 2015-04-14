@@ -1,10 +1,12 @@
 package com.example.mattyice.ultibook;
 
+import android.content.Intent;
 import android.support.v4.app.ListFragment;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -30,6 +32,17 @@ public class PlaybookListFragment extends ListFragment {
     public void onResume(){
         super.onResume();
         ((PlaybookAdapter)getListAdapter()).notifyDataSetChanged();
+    }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id){
+        Playbook p = ((PlaybookListFragment.PlaybookAdapter)getListAdapter()).getItem(position);
+
+        //Starting a different activity
+        Intent i = new Intent(getActivity(), PlayListActivity.class);
+        i.putExtra(PlayListFragment.SELECTED_PLAYBOOK_ID, p.getName());
+        startActivity(i);
+
     }
 
     public class PlaybookAdapter extends ArrayAdapter<Playbook> {

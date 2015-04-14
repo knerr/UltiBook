@@ -8,13 +8,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Matty Ice on 3/25/2015.
@@ -65,14 +65,29 @@ public class NewPlayFragment extends DialogFragment {
                 android.R.layout.simple_spinner_item, res.getStringArray(R.array.newplay_cones_options));
         conesSpinner.setAdapter(conesAdapter);
 
+        //Playbook Spinner
+        final Spinner playbookSpinner = (Spinner)v.findViewById(R.id.newplay_playbook_spinner);
+        ArrayList<Playbook> PlaybookArrayList = PlaybookLab.get(getActivity()).getPlaybooks();
+        List<String> playbookNames = new ArrayList<>();
+        for(int i = 0; i < PlaybookArrayList.size(); i++){
+            playbookNames.add(PlaybookArrayList.get(i).getName());
+        }
+        ArrayAdapter<String> playbookAdapter = new ArrayAdapter<>(getActivity(),
+                android.R.layout.simple_spinner_item, playbookNames);
+        playbookSpinner.setAdapter(playbookAdapter);
+
+
         return new AlertDialog.Builder(getActivity()).setView(v)
                 .setPositiveButton(R.string.newplay_done, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
+                        ArrayList<Play> playArrayList = PlayLab.get(getActivity()).getPlays();
                         mPlay = new Play(playName.getText().toString(),
                                 PlayTypes.valueOf(typeSpinner.getSelectedItem().toString()),
                                 Integer.parseInt(offensiveSpinner.getSelectedItem().toString()),
                                 Integer.parseInt(defensiveSpinner.getSelectedItem().toString()),
-                                Integer.parseInt(conesSpinner.getSelectedItem().toString()));
+                                Integer.parseInt(conesSpinner.getSelectedItem().toString()),
+                                playbookSpinner.getSelectedItem().toString());
+                        playArrayList.add(mPlay);
                         sendResult(Activity.RESULT_OK);
                     }
                 })
