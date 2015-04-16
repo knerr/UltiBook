@@ -10,6 +10,7 @@ public class Stage {
     private ArrayList<Dot> mDefensiveDots;
     private ArrayList<Dot> mConeDots;
     private Dot mDisc;
+    private String mName;
 
     public ArrayList<Dot> getOffensiveDots() {
         return mOffensiveDots;
@@ -41,5 +42,13 @@ public class Stage {
 
     public void setDisc(Dot disc) {
         mDisc = disc;
+    }
+
+    public String getName() {
+        return mName;
+    }
+
+    public void setName(String name) {
+        mName = name;
     }
 }
