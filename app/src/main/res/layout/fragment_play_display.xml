@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
 
-</LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:layout_weight="1"
+        android:background="@color/material_deep_teal_500"
+        />
+
+    <TableRow
+        android:gravity="center|bottom"
+        android:layout_weight="0">
+        <Button
+            android:id="@+id/playeditor_backButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/playeditor_backbutton"/>
+
+        <Button
+            android:id="@+id/playeditor_playButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/playeditor_playbutton"/>
+
+        <Button
+            android:id="@+id/playeditor_stopButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/playeditor_stopbutton"/>
+
+        <Button
+            android:id="@+id/playeditor_forwardButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/playeditor_forwardbutton"/>
+    </TableRow>
+
+</TableLayout>

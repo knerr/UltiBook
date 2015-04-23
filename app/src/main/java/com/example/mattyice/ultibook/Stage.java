@@ -1,16 +1,40 @@
 package com.example.mattyice.ultibook;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Created by Matty Ice on 3/26/2015.
  */
-public class Stage {
+public class Stage implements Serializable{
+    private UUID mId;
     private ArrayList<Dot> mOffensiveDots;
     private ArrayList<Dot> mDefensiveDots;
     private ArrayList<Dot> mConeDots;
     private Dot mDisc;
     private String mName;
+    private String mPlay;
+    private boolean mViewing;
+
+    public Stage () {
+        mOffensiveDots = new ArrayList<>();
+        mDefensiveDots = new ArrayList<>();
+        mConeDots = new ArrayList<>();
+        mId = UUID.randomUUID();
+    }
+
+    public Stage (String name){
+        mOffensiveDots = new ArrayList<>();
+        mDefensiveDots = new ArrayList<>();
+        mConeDots = new ArrayList<>();
+        mName = name;
+        mId = UUID.randomUUID();
+    }
+
+    public UUID getId() {
+        return mId;
+    }
 
     public ArrayList<Dot> getOffensiveDots() {
         return mOffensiveDots;
@@ -50,5 +74,21 @@ public class Stage {
 
     public void setName(String name) {
         mName = name;
+    }
+
+    public String getPlay() {
+        return mPlay;
+    }
+
+    public void setPlay(String play) {
+        mPlay = play;
+    }
+
+    public boolean isViewing() {
+        return mViewing;
+    }
+
+    public void setViewing(boolean viewing) {
+        mViewing = viewing;
     }
 }

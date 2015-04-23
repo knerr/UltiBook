@@ -3,8 +3,8 @@ package com.example.mattyice.ultibook;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Fragment;
-import android.app.FragmentManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,11 +18,11 @@ public class HomepageFragment extends Fragment {
     public final static String NEWPLAY = "NewPlay";
     public final static int NEWPLAYINPUT = 0;
 
-    Button mNewPlay;
-    Button mLoadPlay;
-    Button mPlaybooks;
-    Button mRecentPlay;
-    Button mRecentPlaybook;
+    private Button mNewPlay;
+    private Button mLoadPlay;
+    private Button mPlaybooks;
+    private Button mRecentPlay;
+    private Button mRecentPlaybook;
 
     Play mPlay;
 
@@ -34,7 +34,7 @@ public class HomepageFragment extends Fragment {
         mNewPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fm = getActivity().getFragmentManager();
+                FragmentManager fm = getActivity().getSupportFragmentManager();
                 NewPlayFragment dialog = NewPlayFragment.newInstance();
                 dialog.setTargetFragment(HomepageFragment.this, NEWPLAYINPUT);
                 dialog.show(fm, NEWPLAY);
@@ -85,6 +85,14 @@ public class HomepageFragment extends Fragment {
         if (resultCode != Activity.RESULT_OK) return;
         if (requestCode == NEWPLAYINPUT) {
             mPlay = (Play)data.getSerializableExtra(NewPlayFragment.EXTRA_PLAY);
+
+            //Start up the stage viewer activity
+            Intent i = new Intent(getActivity(), StageListActivity.class);
+            i.putExtra(StageListFragment.SELECTED_PLAY, mPlay);
+            startActivity(i);
         }
+
+
     }
 }
+

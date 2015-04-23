@@ -15,7 +15,7 @@ public class PlaybookLab {
 
     private PlaybookLab(Context appContext) {
         mAppContext = appContext;
-        mPlaybooks = new ArrayList<Playbook>();
+        mPlaybooks = new ArrayList<>();
         for (int i = 0; i < 10; i++){
             Playbook p = new Playbook("Playbook #" + i);
             mPlaybooks.add(p);
@@ -33,7 +33,15 @@ public class PlaybookLab {
         return mPlaybooks;
     }
 
-    public Playbook getPlay(UUID id){
+    public void addPlaybook(Playbook p){
+        mPlaybooks.add(p);
+    }
+
+    public void deletePlaybook(Playbook p){
+        mPlaybooks.remove(p);
+    }
+
+    public Playbook getPlaybook(UUID id){
         for (Playbook p : mPlaybooks){
             if (p.getID().equals(id)){
                 return p;

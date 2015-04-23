@@ -2,12 +2,14 @@ package com.example.mattyice.ultibook;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.UUID;
 
 /**
  * Created by Matty Ice on 3/26/2015.
  */
 public class Play implements Serializable {
+
     private UUID mID;
     private String mName;
     private PlayTypes mType;
@@ -16,6 +18,7 @@ public class Play implements Serializable {
     private int mCones;
     private ArrayList<Stage> mStages;
     private String mPlaybook;
+    private Date mDateCreated;
 
     public Play () {
         mID = UUID.randomUUID();
@@ -87,5 +90,13 @@ public class Play implements Serializable {
     public void setPlaybook(String Playbook) { mPlaybook = Playbook;}
 
     public String getPlaybook() {return mPlaybook;}
+
+    public Date getDateCreated() {
+        return mDateCreated;
+    }
+
+    public void setDateCreated(Date dateCreated) {
+        mDateCreated = dateCreated;
+    }
 
 }

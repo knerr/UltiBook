@@ -7,9 +7,8 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/armstrong_on_moon"
-            android:contentDescription="Header Image"
+            android:layout_height="200dp"
+            android:contentDescription="Header Image Goes Here"
             android:scaleType="centerInside"/>
 
     </RelativeLayout>

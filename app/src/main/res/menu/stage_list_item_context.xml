@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_item_delete_stage"
+          android:icon="@android:drawable/ic_menu_delete"
+          android:title="@string/stagelist_delete" />
+    <item android:id="@+id/menu_item_edit_stage"
+          android:icon="@android:drawable/ic_menu_edit"
+          android:title="@string/stagelist_edit" />
+    <item android:id="@+id/menu_item_copy_stage"
+          android:icon="@android:drawable/ic_menu_add"
+          android:title="@string/stagelist_copy_stage" />
+</menu>

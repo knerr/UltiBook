@@ -10,6 +10,11 @@
     <string name="home_recentplay">Recent Play</string>
     <string name="home_recentplaybook">Recent Playbook</string>
 
+    <string name="newplaybook_dialog_title">New Playbook</string>
+    <string name="newplaybook_name_of_play">Name:</string>
+    <string name="newplaybook_done">Done</string>
+    <string name="newplaybook_cancel">Cancel</string>
+
     <string name="newplay_dialog_title">New Play</string>
     <string name="newplay_name_of_play">Name:</string>
     <string name="newplay_type_of_play">Type:</string>
@@ -17,6 +22,7 @@
     <string name="newplay_defensive_players_label">Defensive Players:</string>
     <string name="newplay_cones_label">Cones:</string>
     <string name="newplay_done">Done</string>
+    <string name="newplay_cancel">Cancel</string>
     <string name="newplay_playbook_label">Playbook: </string>
 
     <string-array name="newplay_number_options">
@@ -50,9 +56,31 @@
     </string-array>
 
     <string name="playbooklist_title">PLAYBOOKS</string>
+    <string name="playbooklist_delete">DELETE</string>
+    <string name="playbooklist_edit">EDIT</string>
+    <string name="playbooklist_new_playbook">New Playbook</string>
 
     <string name="playlist_title">PLAYS</string>
+    <string name="playlist_delete">DELETE</string>
+    <string name="playlist_edit">EDIT</string>
+    <string name="playlist_new_play">New Play</string>
 
+    <string name="stagelist_title">STAGES</string>
+    <string name="stagelist_delete">REMOVE</string>
+    <string name="stagelist_edit">EDIT</string>
+    <string name="stagelist_new_stage">Add Stage</string>
+    <string name="stagelist_copy_stage">COPY STAGE</string>
+
+    <string name="editstage_name">Stage Name:</string>
+    <string name="editstage_done">Done:</string>
+    <string name="editstage_cancel">Cancel:</string>
+
+    <string name="copystage_name">New Stage Name:</string>
+
+    <string name="playeditor_backbutton">&lt;&lt;</string>
+    <string name="playeditor_forwardbutton">&gt;&gt;</string>
+    <string name="playeditor_playbutton">Play</string>
+    <string name="playeditor_stopbutton">Stop</string>
 
     <string name="update_version">0.0.1</string>
     <string name="update_information">This is the first version</string>

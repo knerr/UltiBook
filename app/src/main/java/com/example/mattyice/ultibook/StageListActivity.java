@@ -1,17 +1,19 @@
 package com.example.mattyice.ultibook;
 
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.app.FragmentManager;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+
 /**
- * Created by Matty Ice on 3/26/2015.
+ * Created by Matty Ice on 4/16/2015.
  */
-public class PlaybookListActivity extends SingleFragmentActivity
-        implements PlaybookListFragment.Callbacks {
-    @Override
+public class StageListActivity extends SingleFragmentActivity
+    implements StageListFragment.Callbacks
+{
     protected Fragment createFragment(){
-        return new PlaybookListFragment();
+        Play play = (Play)getIntent().getSerializableExtra(StageListFragment.SELECTED_PLAY);
+        return new StageListFragment().newInstance(play);
     }
 
     @Override
@@ -19,18 +21,20 @@ public class PlaybookListActivity extends SingleFragmentActivity
         return R.layout.activity_masterdetail;
     }
 
-    public void onPlaybookSelected(Playbook playbook) {
+    public void onStageSelected(Stage stage) {
         if (findViewById(R.id.detailFragmentContainer) == null){
             //Start an instance of PlayListActivity
-            Intent i = new Intent(this, PlayListActivity.class);
-            i.putExtra(PlayListFragment.SELECTED_PLAYBOOK_ID, playbook.getName());
+            Intent i = new Intent(this, PlayDisplayActivity.class);
+            i.putExtra(PlayDisplayFragment.SELECTED_STAGE, stage);
             startActivity(i);
         } else {
             FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
 
             Fragment oldDetail = fm.findFragmentById(R.id.detailFragmentContainer);
-            Fragment newDetail = PlayListFragment.newInstance(playbook.getName());
+
+            //IMPLEMENT THE PLAY DISPLAY ACTIVITY HERE
+            Fragment newDetail = PlayDisplayFragment.newInstance(stage);
 
             if (oldDetail != null){
                 ft.remove(oldDetail);

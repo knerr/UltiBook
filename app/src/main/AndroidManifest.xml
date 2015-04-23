@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mattyice.ultibook" >
-    <uses-sdk android:minSdkVersion="11">
+    <uses-sdk android:minSdkVersion="14">
 
     </uses-sdk>
 
@@ -26,7 +26,13 @@
         <activity android:name=".PlayListActivity"
                   android:label="@string/app_name">
 
-                  </activity>
+        </activity>
+        <activity android:name=".StageListActivity"
+                  android:label="@string/app_name">
+        </activity>
+        <activity android:name=".PlayDisplayActivity"
+                  android:label="@string/app_name">
+        </activity>
     </application>
 
 </manifest>

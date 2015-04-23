@@ -42,7 +42,7 @@
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/newplay_play_type_spinner"></Spinner>
+            android:id="@+id/newplay_play_type_spinner" />
 
     </TableRow>
 
@@ -58,7 +58,7 @@
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/newplay_offensive_numbers_spinner"></Spinner>
+            android:id="@+id/newplay_offensive_numbers_spinner" />
 
     </TableRow>
 
@@ -74,7 +74,7 @@
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/newplay_defensive_numbers_spinner"></Spinner>
+            android:id="@+id/newplay_defensive_numbers_spinner" />
 
     </TableRow>
 
@@ -90,7 +90,7 @@
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/newplay_cones_number_spinner"></Spinner>
+            android:id="@+id/newplay_cones_number_spinner" />
 
     </TableRow>
 
@@ -100,11 +100,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/newplay_playbook_label"/>
-        </TableRow>
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/newplay_playbook_spinner"></Spinner>
+            android:id="@+id/newplay_playbook_spinner" />
+    </TableRow>
 
 </TableLayout>

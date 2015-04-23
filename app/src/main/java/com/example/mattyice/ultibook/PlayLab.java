@@ -9,7 +9,7 @@ import java.util.UUID;
  * Created by Matty Ice on 4/8/2015.
  */
 public class PlayLab {
-    ArrayList<Play> mPlayArrayList;
+    private ArrayList<Play> mPlayArrayList;
     private static PlayLab sOurInstance;
     private Context mAppContext;
 
@@ -58,5 +58,9 @@ public class PlayLab {
             }
         }
         return null;
+    }
+
+    public void deletePlay(Play p){
+        mPlayArrayList.remove(p);
     }
 }
