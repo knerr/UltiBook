@@ -39,7 +39,7 @@ public class StageListFragment extends ListFragment {
      * Required interface for hosting activities
      */
     public interface Callbacks {
-        void onStageSelected(Stage stage);
+        void onStageSelected(Stage stage, ArrayList<Stage> stages);
     }
 
     @Override
@@ -72,21 +72,17 @@ public class StageListFragment extends ListFragment {
             Stage stage = new Stage();
             stage.setName("Stage 1");
             stage.setPlay(mPlay.getName());
-            stage.setOffensiveDots(new ArrayList<Dot>(mPlay.getOffensivePlayers()));
-            stage.setDefensiveDots(new ArrayList<Dot>(mPlay.getDefensivePlayers()));
-            stage.setConeDots(new ArrayList<Dot>(mPlay.getCones()));
             mStageArrayList.add(stage);
         }
 
         mCurrentStage = mStageArrayList.get(0);
-
 
         StageAdapter adapter = new StageAdapter(mStageArrayList);
         setListAdapter(adapter);
 
         //Open up the first stage in the viewer
         Stage s = ((StageAdapter)getListAdapter()).getItem(0);
-        mCallbacks.onStageSelected(s);
+        mCallbacks.onStageSelected(s, mStageArrayList);
     }
 
     @Override
@@ -126,9 +122,6 @@ public class StageListFragment extends ListFragment {
                     Stage newStage = new Stage();
                     newStage.setName("Stage 1");
                     newStage.setPlay(mPlay.getName());
-                    newStage.setOffensiveDots(new ArrayList<Dot>(mPlay.getOffensivePlayers()));
-                    newStage.setDefensiveDots(new ArrayList<Dot>(mPlay.getDefensivePlayers()));
-                    newStage.setConeDots(new ArrayList<Dot>(mPlay.getCones()));
 
                     mStageArrayList.add(newStage);
                 }
@@ -150,7 +143,7 @@ public class StageListFragment extends ListFragment {
         startActivity(i);
         */
         //Detail pane function being run. Found in playbook list activity
-        mCallbacks.onStageSelected(s);
+        mCallbacks.onStageSelected(s, mStageArrayList);
 
     }
 

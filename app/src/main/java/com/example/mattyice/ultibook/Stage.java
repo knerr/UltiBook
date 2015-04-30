@@ -9,25 +9,17 @@ import java.util.UUID;
  */
 public class Stage implements Serializable{
     private UUID mId;
-    private ArrayList<Dot> mOffensiveDots;
-    private ArrayList<Dot> mDefensiveDots;
-    private ArrayList<Dot> mConeDots;
-    private Dot mDisc;
+    private ArrayList<Dot> mDots;
     private String mName;
     private String mPlay;
-    private boolean mViewing;
 
     public Stage () {
-        mOffensiveDots = new ArrayList<>();
-        mDefensiveDots = new ArrayList<>();
-        mConeDots = new ArrayList<>();
+        mDots = new ArrayList<>();
         mId = UUID.randomUUID();
     }
 
     public Stage (String name){
-        mOffensiveDots = new ArrayList<>();
-        mDefensiveDots = new ArrayList<>();
-        mConeDots = new ArrayList<>();
+        mDots = new ArrayList<>();
         mName = name;
         mId = UUID.randomUUID();
     }
@@ -36,40 +28,16 @@ public class Stage implements Serializable{
         return mId;
     }
 
-    public ArrayList<Dot> getOffensiveDots() {
-        return mOffensiveDots;
-    }
-
-    public void setOffensiveDots(ArrayList<Dot> offensiveDots) {
-        mOffensiveDots = offensiveDots;
-    }
-
-    public ArrayList<Dot> getDefensiveDots() {
-        return mDefensiveDots;
-    }
-
-    public void setDefensiveDots(ArrayList<Dot> defensiveDots) {
-        mDefensiveDots = defensiveDots;
-    }
-
-    public ArrayList<Dot> getConeDots() {
-        return mConeDots;
-    }
-
-    public void setConeDots(ArrayList<Dot> coneDots) {
-        mConeDots = coneDots;
-    }
-
-    public Dot getDisc() {
-        return mDisc;
-    }
-
-    public void setDisc(Dot disc) {
-        mDisc = disc;
-    }
-
     public String getName() {
         return mName;
+    }
+
+    public ArrayList<Dot> getDots() {
+        return mDots;
+    }
+
+    public void setDots(ArrayList<Dot> dots) {
+        mDots = dots;
     }
 
     public void setName(String name) {
@@ -82,13 +50,5 @@ public class Stage implements Serializable{
 
     public void setPlay(String play) {
         mPlay = play;
-    }
-
-    public boolean isViewing() {
-        return mViewing;
-    }
-
-    public void setViewing(boolean viewing) {
-        mViewing = viewing;
     }
 }

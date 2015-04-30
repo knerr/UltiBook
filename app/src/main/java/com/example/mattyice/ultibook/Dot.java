@@ -8,8 +8,24 @@ import android.graphics.Color;
 public class Dot {
     private int mLocationX;
     private int mLocationY;
+    private String mType;
     private Color mColor;
     private int mRadius;
+
+    public Dot(String type){
+        mType = type;
+        if (type == "Offense"){
+
+        } else if (type == "Defense"){
+
+        } else if (type == "Cone") {
+
+        } else if (type == "Disc") {
+
+        } else {
+
+        }
+    }
 
     public int getLocationX() {
         return mLocationX;
